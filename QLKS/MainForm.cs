@@ -1,4 +1,5 @@
-﻿using Library.Servser;
+﻿using Library.Entity;
+using Library.Servser;
 using QLKS.UserControls;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,9 @@ namespace QLKS
     public partial class MainForm : Form
     {
         Server server;
-        UserControl_ChinhSuaTT _ChinhSuaTT ;
-        UserControl_TTNhanVien _TTNhanVien ;
         public MainForm()
         {
             server = new Server();
-            _ChinhSuaTT = new UserControl_ChinhSuaTT();
-            _TTNhanVien = new UserControl_TTNhanVien();
             InitializeComponent();
             hideSubMenu();
         }
@@ -50,15 +47,18 @@ namespace QLKS
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            UserView.nhanVien = server.GetNhanVien().Where(p => p.MaNV == UserView.user.MaNV).FirstOrDefault();
-            if (UserView.user.Name == "Admin")
+            if(UserView.user.Name != "Admin")
             {
-                image_Avatar.Image = Image.FromFile("D:\\Eleaning\\Công Nghệ Phần Mềm\\QLKS\\QLKS\\Image\\Avatar.jfif");
-                btn_NhanVien.Visible=false;
-            }
-            else if(UserView.user.Name == "NhanVien")
-            {
-
+                UserView.nhanVien = server.GetNhanVien().Where(p => p.MaNV == UserView.user.MaNV).FirstOrDefault();
+                UserView.chucVu = server.GetChucVu().Where(p => p.MaCV == UserView.nhanVien.MaCV).FirstOrDefault();
+                if (UserView.chucVu.TenCV == "Quản Lý")
+                {
+                    btn_NhanVien.Visible = false;
+                }
+                else if (UserView.chucVu.TenCV == "Nhân Viên")
+                {
+                    
+                }
             }
         }
         private void btn_NhanVien_Click(object sender, EventArgs e)
@@ -69,6 +69,7 @@ namespace QLKS
 
         private void btn_ChinhSuaTK_Click(object sender, EventArgs e)
         {
+            UserControl_ChinhSuaTT _ChinhSuaTT = new UserControl_ChinhSuaTT(); ;
             panel_View.Controls.Add(_ChinhSuaTT);
             _ChinhSuaTT.Dock = DockStyle.Fill;
             _ChinhSuaTT.BringToFront();
@@ -76,6 +77,7 @@ namespace QLKS
 
         private void btn_TTNhanVien_Click(object sender, EventArgs e)
         {
+            UserControl_TTNhanVien _TTNhanVien = new UserControl_TTNhanVien(); ;
             panel_View.Controls.Add(_TTNhanVien);
             _TTNhanVien.Dock = DockStyle.Fill;
             _TTNhanVien.BringToFront();

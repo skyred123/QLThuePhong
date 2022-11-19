@@ -227,11 +227,13 @@
             // 
             // image_Avatar
             // 
+            this.image_Avatar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.image_Avatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.image_Avatar.Location = new System.Drawing.Point(25, 20);
+            this.image_Avatar.Location = new System.Drawing.Point(33, 4);
             this.image_Avatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.image_Avatar.Name = "image_Avatar";
-            this.image_Avatar.Size = new System.Drawing.Size(128, 121);
+            this.image_Avatar.Size = new System.Drawing.Size(174, 157);
             this.image_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.image_Avatar.TabIndex = 0;
             this.image_Avatar.TabStop = false;
@@ -256,6 +258,7 @@
             this.btn_DoiAvatar.TabIndex = 0;
             this.btn_DoiAvatar.Text = "Chỉnh Sửa ảnh";
             this.btn_DoiAvatar.UseVisualStyleBackColor = true;
+            this.btn_DoiAvatar.Click += new System.EventHandler(this.btn_DoiAvatar_Click);
             // 
             // btn_Luu
             // 
@@ -266,6 +269,7 @@
             this.btn_Luu.TabIndex = 8;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // panel_MK
             // 

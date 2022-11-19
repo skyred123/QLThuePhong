@@ -25,5 +25,16 @@ namespace Library.Servser
         {
             return dbContext.ChucVu.ToList();
         }
+        public void UpdateNV(NhanVien nv)
+        {
+            var nhanvien = dbContext.nhanVien.Where(p=> p.MaNV == nv.MaNV).FirstOrDefault();
+            nhanvien.TenNV = nv.TenNV;
+            nhanvien.SDT = nv.SDT;
+            nhanvien.Email = nv.Email;
+            nhanvien.MaCV = nv.MaCV;
+            nhanvien.Image = nv.Image;
+            dbContext.nhanVien.Update(nhanvien);
+            dbContext.SaveChanges();
+        }
     }
 }

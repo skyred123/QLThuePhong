@@ -23,6 +23,7 @@ namespace QLKS.UserControls
 
         private void UserControl_TTNhanVien_Load(object sender, EventArgs e)
         {
+            image_Avatar.Image = Image.FromStream(new MemoryStream(UserView.nhanVien.Image));
             txt_Ten.Text = UserView.nhanVien.TenNV;
             txt_SDT.Text = UserView.nhanVien.SDT;
             txt_Email.Text = UserView.nhanVien.Email;

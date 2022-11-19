@@ -35,12 +35,9 @@
             this.btn_TTNhanVien = new System.Windows.Forms.Button();
             this.btn_NhanVien = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.image_Avatar = new System.Windows.Forms.PictureBox();
             this.panel_View = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel_NhanVien.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.image_Avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,13 +50,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 537);
+            this.panel1.Size = new System.Drawing.Size(220, 619);
             this.panel1.TabIndex = 0;
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 280);
+            this.button2.Location = new System.Drawing.Point(0, 307);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(220, 39);
             this.button2.TabIndex = 3;
@@ -72,7 +69,7 @@
             this.panel_NhanVien.Controls.Add(this.btn_ChinhSuaTK);
             this.panel_NhanVien.Controls.Add(this.btn_TTNhanVien);
             this.panel_NhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_NhanVien.Location = new System.Drawing.Point(0, 170);
+            this.panel_NhanVien.Location = new System.Drawing.Point(0, 197);
             this.panel_NhanVien.Name = "panel_NhanVien";
             this.panel_NhanVien.Size = new System.Drawing.Size(220, 110);
             this.panel_NhanVien.TabIndex = 2;
@@ -102,7 +99,7 @@
             // btn_NhanVien
             // 
             this.btn_NhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_NhanVien.Location = new System.Drawing.Point(0, 115);
+            this.btn_NhanVien.Location = new System.Drawing.Point(0, 142);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(220, 55);
             this.btn_NhanVien.TabIndex = 1;
@@ -112,36 +109,25 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.image_Avatar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 115);
+            this.panel2.Size = new System.Drawing.Size(220, 142);
             this.panel2.TabIndex = 0;
-            // 
-            // image_Avatar
-            // 
-            this.image_Avatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.image_Avatar.Location = new System.Drawing.Point(38, 12);
-            this.image_Avatar.Name = "image_Avatar";
-            this.image_Avatar.Size = new System.Drawing.Size(130, 90);
-            this.image_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.image_Avatar.TabIndex = 0;
-            this.image_Avatar.TabStop = false;
             // 
             // panel_View
             // 
             this.panel_View.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_View.Location = new System.Drawing.Point(220, 0);
             this.panel_View.Name = "panel_View";
-            this.panel_View.Size = new System.Drawing.Size(668, 537);
+            this.panel_View.Size = new System.Drawing.Size(716, 619);
             this.panel_View.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 537);
+            this.ClientSize = new System.Drawing.Size(936, 619);
             this.Controls.Add(this.panel_View);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
@@ -151,8 +137,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel_NhanVien.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.image_Avatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,6 +151,5 @@
         private Button btn_ChinhSuaTK;
         private Button btn_TTNhanVien;
         private Panel panel_NhanVien;
-        private PictureBox image_Avatar;
     }
 }
