@@ -319,3 +319,25 @@ ALTER DATABASE [QLTP] SET  READ_WRITE
 GO
 INSERT INTO [dbo].[User] ([Name],[Password] ,[MaUser]) VALUES ('Admin','Admin','b05c1e0a-48b3-4d90-b638-0326cb7f00c1')
 GO
+INSERT INTO [dbo].[ChucVu]
+           ([MaCV]
+           ,[TenCV])
+     VALUES
+           ('48b4e792-dcc1-4c63-a44e-8a591f0046fd','Quản Lý')
+		   INSERT INTO [dbo].[ChucVu]
+           ([MaCV]
+           ,[TenCV])
+     VALUES
+           ('ff49d4a2-6266-4b8f-ad51-934f4d2ab675','Nhân Viên')
+GO
+INSERT INTO [dbo].[NhanVien]
+           ([MaNV]
+           ,[TenNV]
+           ,[Email]
+           ,[MaCV])
+     VALUES
+           ('1234567890',
+           ,'Nguyen Van Thang',
+           ,'48b4e792-dcc1-4c63-a44e-8a591f0046fd')
+GO
+INSERT INTO [dbo].[User] ([Name],[Password] ,[MaUser],[MaNV]) VALUES ('Thang','Thang','b05c1e0a-48b3-4d90-b638-0326cb7f00c9','1234567890')
