@@ -36,5 +36,13 @@ namespace Library.Servser
             dbContext.nhanVien.Update(nhanvien);
             dbContext.SaveChanges();
         }
+        public void UpdateUser(User user)
+        {
+            var item = dbContext.User.FirstOrDefault(p => p.MaUser == user.MaUser);
+            item.Name = user.Name;
+            item.Password= user.Password;
+            dbContext.User.Update(item);
+            dbContext.SaveChanges();
+        }
     }
 }

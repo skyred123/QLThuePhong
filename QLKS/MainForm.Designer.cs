@@ -50,15 +50,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 619);
+            this.panel1.Size = new System.Drawing.Size(182, 619);
             this.panel1.TabIndex = 0;
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 307);
+            this.button2.Location = new System.Drawing.Point(0, 292);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 39);
+            this.button2.Size = new System.Drawing.Size(182, 54);
             this.button2.TabIndex = 3;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -69,17 +69,17 @@
             this.panel_NhanVien.Controls.Add(this.btn_ChinhSuaTK);
             this.panel_NhanVien.Controls.Add(this.btn_TTNhanVien);
             this.panel_NhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_NhanVien.Location = new System.Drawing.Point(0, 197);
+            this.panel_NhanVien.Location = new System.Drawing.Point(0, 192);
             this.panel_NhanVien.Name = "panel_NhanVien";
-            this.panel_NhanVien.Size = new System.Drawing.Size(220, 110);
+            this.panel_NhanVien.Size = new System.Drawing.Size(182, 100);
             this.panel_NhanVien.TabIndex = 2;
             // 
             // btn_ChinhSuaTK
             // 
             this.btn_ChinhSuaTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ChinhSuaTK.Location = new System.Drawing.Point(0, 55);
+            this.btn_ChinhSuaTK.Location = new System.Drawing.Point(0, 50);
             this.btn_ChinhSuaTK.Name = "btn_ChinhSuaTK";
-            this.btn_ChinhSuaTK.Size = new System.Drawing.Size(220, 55);
+            this.btn_ChinhSuaTK.Size = new System.Drawing.Size(182, 50);
             this.btn_ChinhSuaTK.TabIndex = 1;
             this.btn_ChinhSuaTK.Text = "Chỉnh Sửa Tài Khoản";
             this.btn_ChinhSuaTK.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             this.btn_TTNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_TTNhanVien.Location = new System.Drawing.Point(0, 0);
             this.btn_TTNhanVien.Name = "btn_TTNhanVien";
-            this.btn_TTNhanVien.Size = new System.Drawing.Size(220, 55);
+            this.btn_TTNhanVien.Size = new System.Drawing.Size(182, 50);
             this.btn_TTNhanVien.TabIndex = 0;
             this.btn_TTNhanVien.Text = "Thông Tin";
             this.btn_TTNhanVien.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             this.btn_NhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_NhanVien.Location = new System.Drawing.Point(0, 142);
             this.btn_NhanVien.Name = "btn_NhanVien";
-            this.btn_NhanVien.Size = new System.Drawing.Size(220, 55);
+            this.btn_NhanVien.Size = new System.Drawing.Size(182, 50);
             this.btn_NhanVien.TabIndex = 1;
             this.btn_NhanVien.Text = "Nhân Viên";
             this.btn_NhanVien.UseVisualStyleBackColor = true;
@@ -112,15 +112,15 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 142);
+            this.panel2.Size = new System.Drawing.Size(182, 142);
             this.panel2.TabIndex = 0;
             // 
             // panel_View
             // 
             this.panel_View.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_View.Location = new System.Drawing.Point(220, 0);
+            this.panel_View.Location = new System.Drawing.Point(182, 0);
             this.panel_View.Name = "panel_View";
-            this.panel_View.Size = new System.Drawing.Size(716, 619);
+            this.panel_View.Size = new System.Drawing.Size(754, 619);
             this.panel_View.TabIndex = 1;
             // 
             // MainForm

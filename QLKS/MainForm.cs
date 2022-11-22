@@ -15,12 +15,16 @@ namespace QLKS
 {
     public partial class MainForm : Form
     {
+        public static MainForm instance;
+        public string s;
         Server server;
         public MainForm()
         {
             server = new Server();
             InitializeComponent();
             hideSubMenu();
+            instance= this;
+            button2.Text = s;
         }
         private void hideSubMenu()
         {

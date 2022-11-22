@@ -15,6 +15,7 @@ namespace QLKS.UserControls
     public partial class UserControl_ChinhSuaTT : UserControl
     {
         Server server;
+
         public UserControl_ChinhSuaTT()
         {
             server = new Server();
@@ -42,6 +43,7 @@ namespace QLKS.UserControls
         private void btn_TTTK_Click(object sender, EventArgs e)
         {
             showSubMenu(panel_DTTTK);
+            label11.Text = "";
             if (UserView.nhanVien.Image == null)
             {
                 image_Avatar.Image = Image.FromFile("D:\\Eleaning\\Công Nghệ Phần Mềm\\QLKS\\QLKS\\Image\\AvatarRong.jpg");
@@ -59,18 +61,24 @@ namespace QLKS.UserControls
         private void btn_MK_Click(object sender, EventArgs e)
         {
             showSubMenu(panel_DMK);
+            label12.Text = "";
+            txt_TenMK.Text = UserView.user.Name;
         }
 
-        private void btn_Luu_Click(object sender, EventArgs e)
+        private void btn_LuuTTTK_Click(object sender, EventArgs e)
         {
-            ImageConverter converter = new ImageConverter();
-            UserView.nhanVien.Image = converter.ConvertTo(image_Avatar.Image,typeof(byte[])) as byte[];
-            UserView.nhanVien.TenNV = txt_Ten.Text;
-            UserView.nhanVien.Email= txt_Email.Text;
-            UserView.nhanVien.SDT = txt_SDT.Text;
-            if (UserView.nhanVien.Image.ToString() != null)
+            if (UserView.nhanVien.TenNV != txt_Ten.Text || UserView.nhanVien.SDT != txt_SDT.Text || UserView.nhanVien.Email != txt_Email.Text )
             {
-                server.UpdateNV(UserView.nhanVien);
+                ImageConverter converter = new ImageConverter();
+                UserView.nhanVien.Image = converter.ConvertTo(image_Avatar.Image, typeof(byte[])) as byte[];
+                UserView.nhanVien.TenNV = txt_Ten.Text;
+                UserView.nhanVien.Email = txt_Email.Text;
+                UserView.nhanVien.SDT = txt_SDT.Text;
+                if (UserView.nhanVien.Image.ToString() != null)
+                {
+                    server.UpdateNV(UserView.nhanVien);
+                    label11.Text = "Lưu Thành Công";
+                }
             }
         }
         private void btn_DoiAvatar_Click(object sender, EventArgs e)
@@ -82,6 +90,26 @@ namespace QLKS.UserControls
                     image_Avatar.Image = Image.FromFile(ofd.FileName);
                 }
             }
+        }
+
+        private void btn_LuuMK_Click(object sender, EventArgs e)
+        {
+            if(txt_MKC.Text !="" && txt_MKM1.Text != "" && txt_MKM2.Text != "" && txt_TenMK.Text != "")
+            {
+                if(txt_MKM1.Text == txt_MKM2.Text)
+                {
+                    if(UserView.user.Password == txt_MKC.Text)
+                    {
+                        UserView.user.Name = txt_TenMK.Text;
+                        UserView.user.Password = txt_MKM2.Text;
+                        server.UpdateUser(UserView.user);
+                        label12.Text = "Lưu Thành Công";
+                    }
+                }
+                label12.Text = "Nhập Sai Mật Khẩu";
+            }
+            else
+                label12.Text = "Bạn Nhập Thiếu Thông Tin";
         }
     }
 }
