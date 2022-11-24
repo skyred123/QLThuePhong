@@ -1,14 +1,23 @@
 ﻿using Library.Entity;
 using Library.Servser;
 using QLKS.UserControls;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace QLKS
+namespace QLKS.Forms
 {
-    public partial class DangNhap : Form
+    public partial class LoginForm : Form
     {
         Server server;
-        
-        public DangNhap()
+
+        public LoginForm()
         {
             server = new Server();
             InitializeComponent();

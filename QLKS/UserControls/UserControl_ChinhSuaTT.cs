@@ -73,11 +73,19 @@ namespace QLKS.UserControls
                 UserView.nhanVien.Image = converter.ConvertTo(image_Avatar.Image, typeof(byte[])) as byte[];
                 UserView.nhanVien.TenNV = txt_Ten.Text;
                 UserView.nhanVien.Email = txt_Email.Text;
-                UserView.nhanVien.SDT = txt_SDT.Text;
-                if (UserView.nhanVien.Image.ToString() != null)
+                int c = txt_SDT.Text.Count();
+                if (System.Text.RegularExpressions.Regex.IsMatch(txt_SDT.Text, "[0-9]") == true && txt_SDT.Text.Count() == 10)
                 {
-                    server.UpdateNV(UserView.nhanVien);
-                    label11.Text = "Lưu Thành Công";
+                    UserView.nhanVien.SDT = txt_SDT.Text;
+                    if (UserView.nhanVien.Image.ToString() != null)
+                    {
+                        server.UpdateNV(UserView.nhanVien);
+                        label11.Text = "Lưu Thành Công";
+                    }
+                }
+                else
+                {
+                    label11.Text = "Sai Số Điện Thoại";
                 }
             }
         }
@@ -98,15 +106,21 @@ namespace QLKS.UserControls
             {
                 if(txt_MKM1.Text == txt_MKM2.Text)
                 {
-                    if(UserView.user.Password == txt_MKC.Text)
+                    if (System.Text.RegularExpressions.Regex.IsMatch(txt_SDT.Text, "^[a-zA-Z0-9\x20]+$"))
                     {
-                        UserView.user.Name = txt_TenMK.Text;
-                        UserView.user.Password = txt_MKM2.Text;
-                        server.UpdateUser(UserView.user);
-                        label12.Text = "Lưu Thành Công";
+                        if (UserView.user.Password == txt_MKC.Text)
+                        {
+                            UserView.user.Name = txt_TenMK.Text;
+                            UserView.user.Password = txt_MKM2.Text;
+                            server.UpdateUser(UserView.user);
+                            label12.Text = "Lưu Thành Công";
+                        }
                     }
+                    else
+                        label12.Text = "Mật Khẩu Chứa Ký Tự Đặt Biệt";
                 }
-                label12.Text = "Nhập Sai Mật Khẩu";
+                else
+                    label12.Text = "Nhập Sai Mật Khẩu";
             }
             else
                 label12.Text = "Bạn Nhập Thiếu Thông Tin";

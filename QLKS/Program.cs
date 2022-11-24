@@ -1,3 +1,5 @@
+using QLKS.Forms;
+
 namespace QLKS
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace QLKS
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new DangNhap());
+            Application.Run(new LoginForm());
         }
     }
 }

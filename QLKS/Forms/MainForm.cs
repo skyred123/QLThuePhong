@@ -1,5 +1,4 @@
-﻿using Library.Entity;
-using Library.Servser;
+﻿using Library.Servser;
 using QLKS.UserControls;
 using System;
 using System.Collections.Generic;
@@ -11,20 +10,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLKS
+namespace QLKS.Forms
 {
     public partial class MainForm : Form
     {
-        public static MainForm instance;
-        public string s;
         Server server;
         public MainForm()
         {
             server = new Server();
             InitializeComponent();
             hideSubMenu();
-            instance= this;
-            button2.Text = s;
         }
         private void hideSubMenu()
         {
@@ -51,18 +46,23 @@ namespace QLKS
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if(UserView.user.Name != "Admin")
+            if (UserView.user.Name != "Admin")
             {
                 UserView.nhanVien = server.GetNhanVien().Where(p => p.MaNV == UserView.user.MaNV).FirstOrDefault();
                 UserView.chucVu = server.GetChucVu().Where(p => p.MaCV == UserView.nhanVien.MaCV).FirstOrDefault();
                 if (UserView.chucVu.TenCV == "Quản Lý")
                 {
-                    btn_NhanVien.Visible = false;
+                    btn_NhanVien.Text = "Quản Lý";
                 }
                 else if (UserView.chucVu.TenCV == "Nhân Viên")
                 {
-                    
+                    btn_QLNV.Visible = false;
                 }
+            }
+            else
+            {
+                btn_TTNhanVien.Visible = false;
+                btn_ChinhSuaTK.Visible = false;
             }
         }
         private void btn_NhanVien_Click(object sender, EventArgs e)
