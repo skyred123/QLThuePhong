@@ -88,6 +88,7 @@
             this.btn_QLNV.Text = "Nhân Viên";
             this.btn_QLNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_QLNV.UseVisualStyleBackColor = true;
+            this.btn_QLNV.Click += new System.EventHandler(this.btn_QLNV_Click);
             // 
             // btn_ChinhSuaTK
             // 
@@ -142,6 +143,7 @@
             // 
             // panel_View
             // 
+            this.panel_View.AutoSize = true;
             this.panel_View.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_View.Location = new System.Drawing.Point(182, 0);
             this.panel_View.Name = "panel_View";
@@ -163,6 +165,7 @@
             this.panel_NhanVien.ResumeLayout(false);
             this.panel_NhanVien.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

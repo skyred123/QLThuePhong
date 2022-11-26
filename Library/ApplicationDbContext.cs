@@ -13,7 +13,7 @@ namespace Library
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<User> User { get; set; }
-        public DbSet<NhanVien> nhanVien { get; set; }
+        public DbSet<NhanVien> NhanVien { get; set; }
         public DbSet<ChucVu> ChucVu { get; set; }
         public ApplicationDbContext()
             : base(getApplicationDbContext())
@@ -22,7 +22,7 @@ namespace Library
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(builder);;
             // Customize the ASP.NET Core Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Core Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);

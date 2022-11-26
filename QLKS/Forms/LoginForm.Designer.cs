@@ -122,7 +122,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng Nhập";
             // 
-            // DangNhap
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +132,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(650, 500);
             this.MinimumSize = new System.Drawing.Size(650, 500);
-            this.Name = "DangNhap";
+            this.Name = "LoginForm";
             this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.panel1.ResumeLayout(false);

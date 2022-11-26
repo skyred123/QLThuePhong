@@ -1,4 +1,5 @@
-﻿using Library.Servser;
+﻿using Library.Entity;
+using Library.Servser;
 using QLKS.UserControls;
 using System;
 using System.Collections.Generic;
@@ -85,6 +86,14 @@ namespace QLKS.Forms
             panel_View.Controls.Add(_TTNhanVien);
             _TTNhanVien.Dock = DockStyle.Fill;
             _TTNhanVien.BringToFront();
+        }
+
+        private void btn_QLNV_Click(object sender, EventArgs e)
+        {
+            UserControl_QLNV _QLNV= new UserControl_QLNV(); ;
+            panel_View.Controls.Add(_QLNV);
+            _QLNV.Dock = DockStyle.Fill;
+            _QLNV.BringToFront();
         }
     }
 }

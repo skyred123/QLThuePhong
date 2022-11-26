@@ -16,6 +16,6 @@ namespace Library.Entity
         public string? Password { get; set; }
         public string? MaNV { get; set; }
         [ForeignKey(name:("MaNV"))]
-        public static NhanVien? NhanVien { get; set; }  
+        public virtual NhanVien NhanVien { get; set; }  
     }
 }

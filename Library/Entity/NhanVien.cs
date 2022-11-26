@@ -16,8 +16,9 @@ namespace Library.Entity
         public string? SDT { get; set; }
         public byte[]? Image { get; set; }
         public string? Email { get; set; }
+        [ForeignKey(name: "ChucVu")]
         public Guid MaCV { get; set; }
-        [ForeignKey(name:"MaCV")]
-        public static ChucVu? ChucVu { get; set; }
+        
+        public virtual ChucVu ChucVu { get; set; }
     }
 }
