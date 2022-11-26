@@ -1,5 +1,6 @@
 ﻿using Library.Entity;
 using Library.Servser;
+using QLKS.Modules;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,62 +116,29 @@ namespace QLKS.UserControls
 
         private void btn_LuuTTTK_Click(object sender, EventArgs e)
         {
-            /*if (nhanVien.TenNV != txt_Ten.Text || nhanVien.SDT != txt_SDT.Text || nhanVien.Email != txt_Email.Text )
-            {*/
-                ImageConverter converter = new ImageConverter();
-                nhanVien.Image = converter.ConvertTo(image_Avatar.Image, typeof(byte[])) as byte[];
-                nhanVien.TenNV = txt_Ten.Text;
-                nhanVien.Email = txt_Email.Text;
-                int c = txt_SDT.Text.Count();
-                if (System.Text.RegularExpressions.Regex.IsMatch(txt_SDT.Text, "[0-9]") == true && txt_SDT.Text.Count() == 10)
+            ImageConverter converter = new ImageConverter();
+            nhanVien.MaNV = txt_CCCD.Text;
+            nhanVien.TenNV = txt_Ten.Text;
+            nhanVien.Email = txt_Email.Text;
+            nhanVien.SDT = txt_SDT.Text;
+            nhanVien.MaCV = Guid.Empty;
+            if (image_Avatar.Image == null)
+            {
+                nhanVien.Image = (byte[])converter.ConvertTo(Image.FromFile("D:\\Eleaning\\Code\\QLKS\\QLKS\\Image\\AvatarRong.jpg"), typeof(byte[]));
+            }
+            else
+            {
+                nhanVien.Image = (byte[])converter.ConvertTo(image_Avatar.Image, typeof(byte[]));
+            }
+            foreach (ChucVu cv in server.GetChucVu())
+            {
+                if (string.Compare(cv.TenCV, txt_ChucVu.Text, true) == 0)
                 {
-                    nhanVien.SDT = txt_SDT.Text;
-                    if (nhanVien.Image.ToString() != null)
-                    {
-                        if (UserView.Edit == 2)
-                        {
-                            foreach(NhanVien nv in server.GetNhanVien())
-                            {
-                                if(nv.MaNV == txt_CCCD.Text)
-                                {
-                                    label11.Text = "CCCD Đã Tồn Tại";
-                                    Clear();
-                                    return;
-                                }
-                                else
-                                {
-                                }
-                            }
-                            foreach(ChucVu cv in server.GetChucVu())
-                            {
-                                if (string.Compare(cv.TenCV, txt_ChucVu.Text, true) != 0)
-                                {
-                                    label11.Text = "Tên Chức Vụ Không Tồn Tại";
-                                    Clear();
-                                    return;
-                                }
-                            }
-                            nhanVien.MaNV = txt_CCCD.Text;
-                            nhanVien.MaCV = server.GetChucVu().FirstOrDefault(x => string.Compare(x.TenCV,txt_ChucVu.Text,true)==0).MaCV;
-                            user.MaNV = nhanVien.MaNV;
-                            user.Name = nhanVien.TenNV;
-                            user.Password = "1";
-                            server.AddNhanVien(nhanVien);
-                            server.AddUser(user);
-                            label11.Text = "Lưu Thành Công Tài Khoản Có Mật Khẩu Là 1";
-                        }
-                        else
-                        {
-                            server.UpdateNV(nhanVien);
-                            label11.Text = "Lưu Thành Công";
-                        }
-                    }
+                    nhanVien.MaCV = server.GetChucVu().FirstOrDefault(x => string.Compare(x.TenCV, txt_ChucVu.Text, true) == 0).MaCV;
                 }
-                else
-                {
-                    label11.Text = "Sai Số Điện Thoại";
-                }
-            //}//
+            }
+            Module_EditTTNV module_EditTTNV = new Module_EditTTNV();
+            module_EditTTNV.EditNV(nhanVien);
         }
         private void btn_DoiAvatar_Click(object sender, EventArgs e)
         {

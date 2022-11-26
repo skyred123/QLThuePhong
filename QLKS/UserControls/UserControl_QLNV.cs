@@ -2,12 +2,14 @@
 using Library.Servser;
 using Microsoft.EntityFrameworkCore;
 using QLKS.Forms;
+using QLKS.Modules;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,13 +30,12 @@ namespace QLKS.UserControls
             dgv_NhanVien.Rows.Clear();
             foreach(NhanVien nv in server.GetNhanVien())
             {
-                dgv_NhanVien.Rows.Add(nv.MaNV,nv.TenNV, Image.FromStream(new MemoryStream(nv.Image)), nv.SDT , nv.Email,nv.ChucVu.TenCV);
+                dgv_NhanVien.Rows.Add(nv.MaNV, nv.TenNV, Image.FromStream(new MemoryStream(nv.Image)), nv.SDT, nv.Email, nv.ChucVu.TenCV);
             }
             dgv_NhanVien.Refresh();
         }
         public void DefaulForenkey()
         {
-            var a = server.GetNhanVien()[0];
             for (int i = 0; i < server.GetNhanVien().Count; i++)
             {
                 server.GetNhanVien()[i].ChucVu = server.GetChucVu().FirstOrDefault(x => x.MaCV == server.GetNhanVien()[i].MaCV);

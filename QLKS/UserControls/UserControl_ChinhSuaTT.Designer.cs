@@ -423,6 +423,7 @@
             this.txt_MKM2.Name = "txt_MKM2";
             this.txt_MKM2.Size = new System.Drawing.Size(229, 27);
             this.txt_MKM2.TabIndex = 5;
+            this.txt_MKM2.UseSystemPasswordChar = true;
             // 
             // txt_MKM1
             // 
@@ -431,6 +432,7 @@
             this.txt_MKM1.Name = "txt_MKM1";
             this.txt_MKM1.Size = new System.Drawing.Size(229, 27);
             this.txt_MKM1.TabIndex = 3;
+            this.txt_MKM1.UseSystemPasswordChar = true;
             // 
             // txt_MKC
             // 
@@ -439,6 +441,7 @@
             this.txt_MKC.Name = "txt_MKC";
             this.txt_MKC.Size = new System.Drawing.Size(229, 27);
             this.txt_MKC.TabIndex = 1;
+            this.txt_MKC.UseSystemPasswordChar = true;
             // 
             // label10
             // 
