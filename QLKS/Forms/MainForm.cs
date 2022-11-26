@@ -74,7 +74,8 @@ namespace QLKS.Forms
 
         private void btn_ChinhSuaTK_Click(object sender, EventArgs e)
         {
-            UserControl_ChinhSuaTT _ChinhSuaTT = new UserControl_ChinhSuaTT(); ;
+            UserControl_ChinhSuaTT _ChinhSuaTT = new UserControl_ChinhSuaTT();
+            UserView.Edit = 0;
             panel_View.Controls.Add(_ChinhSuaTT);
             _ChinhSuaTT.Dock = DockStyle.Fill;
             _ChinhSuaTT.BringToFront();

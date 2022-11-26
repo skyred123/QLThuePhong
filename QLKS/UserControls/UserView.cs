@@ -12,5 +12,10 @@ namespace QLKS.UserControls
         public static User? user { get; set; }
         public static NhanVien? nhanVien { get; set; }
         public static ChucVu? chucVu { get; set; }
+        public static int Edit { get; set; }
+        public static NhanVien? nhanVienEdit { get; set; }
+        public static User? userEdit { get; set; }
+        public static NhanVien? nhanVienDelete { get; set; }
+        public static User? userDelete { get; set; }
     }
 }

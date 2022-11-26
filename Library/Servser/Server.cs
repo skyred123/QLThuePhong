@@ -51,5 +51,20 @@ namespace Library.Servser
             dbContext.NhanVien.Add(nv);
             dbContext.SaveChanges();
         }
+        public void AddUser(User user)
+        {
+            dbContext.User.Add(user);
+            dbContext.SaveChanges();
+        }
+        public void DeleteUser(User user)
+        {
+            dbContext.User.Remove(user);
+            dbContext.SaveChanges();
+        }
+        public void DeleteNV(NhanVien nv)
+        {
+            dbContext.NhanVien.Remove(nv);
+            dbContext.SaveChanges();
+        }
     }
 }

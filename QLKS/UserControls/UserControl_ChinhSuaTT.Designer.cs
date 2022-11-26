@@ -33,20 +33,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel_DTTTK = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_ChucVu = new System.Windows.Forms.TextBox();
-            this.txt_Email = new System.Windows.Forms.TextBox();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.txt_Ten = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.image_Avatar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_DoiAvatar = new System.Windows.Forms.Button();
             this.btn_LuuTTTK = new System.Windows.Forms.Button();
+            this.txt_ChucVu = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Ten = new System.Windows.Forms.TextBox();
+            this.txt_CCCD = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel_MK = new System.Windows.Forms.Panel();
             this.btn_MK = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -111,7 +113,7 @@
             this.panel_DTTTK.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_DTTTK.Location = new System.Drawing.Point(0, 60);
             this.panel_DTTTK.Name = "panel_DTTTK";
-            this.panel_DTTTK.Size = new System.Drawing.Size(469, 429);
+            this.panel_DTTTK.Size = new System.Drawing.Size(469, 446);
             this.panel_DTTTK.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -119,106 +121,33 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.txt_ChucVu, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Email, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txt_SDT, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Ten, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_LuuTTTK, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btn_LuuTTTK, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txt_ChucVu, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Email, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txt_SDT, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Ten, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt_CCCD, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 173F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(469, 429);
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(469, 446);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // txt_ChucVu
-            // 
-            this.txt_ChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_ChucVu.Location = new System.Drawing.Point(237, 329);
-            this.txt_ChucVu.Name = "txt_ChucVu";
-            this.txt_ChucVu.Size = new System.Drawing.Size(229, 27);
-            this.txt_ChucVu.TabIndex = 7;
-            // 
-            // txt_Email
-            // 
-            this.txt_Email.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_Email.Location = new System.Drawing.Point(237, 278);
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(229, 27);
-            this.txt_Email.TabIndex = 6;
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_SDT.Location = new System.Drawing.Point(237, 227);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(229, 27);
-            this.txt_SDT.TabIndex = 3;
-            // 
-            // txt_Ten
-            // 
-            this.txt_Ten.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_Ten.Location = new System.Drawing.Point(237, 176);
-            this.txt_Ten.Name = "txt_Ten";
-            this.txt_Ten.Size = new System.Drawing.Size(229, 27);
-            this.txt_Ten.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(3, 326);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "     Chức Vụ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(3, 275);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "     Email";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(3, 224);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(228, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "     Số Điện Thoại";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(3, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "     Tên";
             // 
             // panel1
             // 
@@ -227,7 +156,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 165);
+            this.panel1.Size = new System.Drawing.Size(228, 172);
             this.panel1.TabIndex = 9;
             // 
             // image_Avatar
@@ -238,7 +167,7 @@
             this.image_Avatar.Location = new System.Drawing.Point(33, 4);
             this.image_Avatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.image_Avatar.Name = "image_Avatar";
-            this.image_Avatar.Size = new System.Drawing.Size(174, 157);
+            this.image_Avatar.Size = new System.Drawing.Size(174, 164);
             this.image_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.image_Avatar.TabIndex = 0;
             this.image_Avatar.TabStop = false;
@@ -250,7 +179,7 @@
             this.panel2.Location = new System.Drawing.Point(237, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(229, 165);
+            this.panel2.Size = new System.Drawing.Size(229, 172);
             this.panel2.TabIndex = 10;
             // 
             // btn_DoiAvatar
@@ -268,13 +197,89 @@
             // btn_LuuTTTK
             // 
             this.btn_LuuTTTK.AutoSize = true;
-            this.btn_LuuTTTK.Location = new System.Drawing.Point(237, 380);
+            this.btn_LuuTTTK.Location = new System.Drawing.Point(237, 403);
             this.btn_LuuTTTK.Name = "btn_LuuTTTK";
-            this.btn_LuuTTTK.Size = new System.Drawing.Size(104, 40);
+            this.btn_LuuTTTK.Size = new System.Drawing.Size(104, 35);
             this.btn_LuuTTTK.TabIndex = 8;
             this.btn_LuuTTTK.Text = "Lưu";
             this.btn_LuuTTTK.UseVisualStyleBackColor = true;
             this.btn_LuuTTTK.Click += new System.EventHandler(this.btn_LuuTTTK_Click);
+            // 
+            // txt_ChucVu
+            // 
+            this.txt_ChucVu.Location = new System.Drawing.Point(237, 359);
+            this.txt_ChucVu.Name = "txt_ChucVu";
+            this.txt_ChucVu.Size = new System.Drawing.Size(229, 27);
+            this.txt_ChucVu.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(3, 356);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "     Chức Vụ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(3, 312);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "     Email";
+            // 
+            // txt_Email
+            // 
+            this.txt_Email.Location = new System.Drawing.Point(237, 315);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(229, 27);
+            this.txt_Email.TabIndex = 6;
+            // 
+            // txt_SDT
+            // 
+            this.txt_SDT.Location = new System.Drawing.Point(237, 271);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Size = new System.Drawing.Size(229, 27);
+            this.txt_SDT.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(3, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "     Số Điện Thoại";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(3, 224);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "     Tên";
+            // 
+            // txt_Ten
+            // 
+            this.txt_Ten.Location = new System.Drawing.Point(237, 227);
+            this.txt_Ten.Name = "txt_Ten";
+            this.txt_Ten.Size = new System.Drawing.Size(229, 27);
+            this.txt_Ten.TabIndex = 1;
+            // 
+            // txt_CCCD
+            // 
+            this.txt_CCCD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_CCCD.Location = new System.Drawing.Point(237, 183);
+            this.txt_CCCD.Name = "txt_CCCD";
+            this.txt_CCCD.Size = new System.Drawing.Size(229, 27);
+            this.txt_CCCD.TabIndex = 12;
             // 
             // label11
             // 
@@ -282,17 +287,28 @@
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(3, 377);
+            this.label11.Location = new System.Drawing.Point(3, 400);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(228, 25);
+            this.label11.Size = new System.Drawing.Size(228, 28);
             this.label11.TabIndex = 11;
+            this.label11.UseCompatibleTextRendering = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(3, 180);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 25);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "     CCCD";
             // 
             // panel_MK
             // 
             this.panel_MK.Controls.Add(this.btn_MK);
             this.panel_MK.Controls.Add(this.label6);
             this.panel_MK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_MK.Location = new System.Drawing.Point(0, 489);
+            this.panel_MK.Location = new System.Drawing.Point(0, 506);
             this.panel_MK.Name = "panel_MK";
             this.panel_MK.Size = new System.Drawing.Size(469, 60);
             this.panel_MK.TabIndex = 2;
@@ -323,7 +339,7 @@
             // 
             this.panel_DMK.Controls.Add(this.tableLayoutPanel2);
             this.panel_DMK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_DMK.Location = new System.Drawing.Point(0, 549);
+            this.panel_DMK.Location = new System.Drawing.Point(0, 566);
             this.panel_DMK.Name = "panel_DMK";
             this.panel_DMK.Size = new System.Drawing.Size(469, 197);
             this.panel_DMK.TabIndex = 3;
@@ -465,7 +481,7 @@
             this.Controls.Add(this.panel_DTTTK);
             this.Controls.Add(this.panel_TTTK);
             this.Name = "UserControl_ChinhSuaTT";
-            this.Size = new System.Drawing.Size(469, 747);
+            this.Size = new System.Drawing.Size(469, 763);
             this.Load += new System.EventHandler(this.UserControl_ChinhSuaTT_Load);
             this.panel_TTTK.ResumeLayout(false);
             this.panel_TTTK.PerformLayout();
@@ -521,5 +537,7 @@
         private TextBox txt_TenMK;
         private Label label11;
         private Label label12;
+        private TextBox txt_CCCD;
+        private Label label13;
     }
 }
